@@ -20,7 +20,7 @@ const UserList = () => {
                     <h1>You do not have permission to view this page</h1>
             }
             {
-                currentUser && currentUser.role == 'Admin' &&
+                currentUser && currentUser.role === 'Admin' &&
                 <li className="list-group-item">
                     {
                         Object.entries(users).map(([key, user]) =>

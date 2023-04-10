@@ -23,7 +23,7 @@ const Profile = () => {
     const navigate = useNavigate();
     const author = profile != null ? profile._id : "000000000000000000000000";
     const {reviews} = useSelector((state) => state.reviews)
-    const name = profile ? profile.role == "Corporate" ? profile.companyName : profile.firstName + " " + profile.lastName : "";
+    const name = profile ? profile.role === "Corporate" ? profile.companyName : profile.firstName + " " + profile.lastName : "";
     useEffect(() => {
         dispatch(findReviewsByAuthorThunk(author))
     },[author])
